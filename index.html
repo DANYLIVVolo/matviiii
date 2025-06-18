@@ -1,0 +1,126 @@
+/* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1e1e1e;
+    padding: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+header h1, header h2 {
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+header h2:hover {
+    color: #00d050;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* Анімація карток */
+article {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00d050;
+}
+
+.cina {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Кнопка */
+button {
+    background-color: #00d050;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00a840;
+}
+
+/* Посилання */
+a {
+    color: #00d0ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    padding: 30px;
+    text-align: center;
+}
+
+footer img {
+    width: 40px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+/* Анімації */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
